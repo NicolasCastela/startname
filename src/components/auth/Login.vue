@@ -6,8 +6,6 @@
         <v-form   ref="form">
           <v-text-field
             variant="solo-filled"
-            v-model="name"
-            :rules="nameRules"
             label="Usuario"
             placeholder="Digite seu usuario"
             required
@@ -15,8 +13,6 @@
 
           <v-text-field
             variant="solo-filled"
-            v-model="name"
-            :rules="nameRules"
             label="Senha"
             type="password"
             placeholder="Digite sua senha"
@@ -31,7 +27,7 @@
         </v-form>
       </v-card-text>
       <v-card-actions>
-          <v-btn  variant="flat" to="/" color="success" block @click="validate">
+          <v-btn  variant="flat" to="/" color="success" block >
               Entrar
             </v-btn> </v-card-actions>
     </v-card>
