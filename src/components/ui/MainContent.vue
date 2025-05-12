@@ -7,21 +7,18 @@
         <v-select
           label="Selecione a cidade"
           :items="['São Paulo', 'Rio de Janeiro', 'Belo Horizonte']"
-          v-model="selectedCity"
         ></v-select>
       </v-col>
       <v-col cols="12" md="4">
         <v-select
           label="Selecione o que procura"
           :items="['Restaurantes', 'Hotéis', 'Lojas']"
-          v-model="selectedCategory"
         ></v-select>
       </v-col>
       <v-col cols="12" md="4">
         <v-select
           label="Selecione a distância"
           :items="['5km', '10km', '20km']"
-          v-model="selectedDistance"
         ></v-select>
       </v-col>
     </v-row>
