@@ -1,19 +1,30 @@
 <template>
   <v-navigation-drawer
     :rail="!appStore.stateDrawer"
-    rail-width="80"
+    rail-width="60"
     permanent
     rounded="lg"
     elevation="4"
     class="custom-drawer "
     :scrim="false"
   >
-    <v-list color="transparent">
-      <!-- Seus itens aqui -->
-      <!-- Seus itens aqui -->
-      <!-- Seus itens aqui -->
-      <!-- Seus itens aqui -->
-    </v-list>
+        <v-list density="compact" nav>
+          <v-list-item
+            prepend-icon="mdi-home-city"
+            title="Home"
+            value="home"
+          ></v-list-item>
+          <v-list-item
+            prepend-icon="mdi-account"
+            title="My Account"
+            value="account"
+          ></v-list-item>
+          <v-list-item
+            prepend-icon="mdi-account-group-outline"
+            title="Users"
+            value="users"
+          ></v-list-item>
+        </v-list>
 
     <template v-slot:append>
       <div class="pa-2">
