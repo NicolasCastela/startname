@@ -1,5 +1,4 @@
 <template>
-<ToolBars/>
   <v-main>
     <router-view />
   </v-main>

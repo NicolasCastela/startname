@@ -1,8 +1,12 @@
 <template>
   <v-navigation-drawer
-    :rail="!drawer"
-    theme="dark"
-    floating
+    :rail="!appStore.stateDrawer"
+    rail-width="80"
+    permanent
+    rounded="lg"
+    elevation="4"
+    class="custom-drawer "
+    :scrim="false"
   >
     <v-list color="transparent">
       <!-- Seus itens aqui -->
@@ -13,22 +17,21 @@
 
     <template v-slot:append>
       <div class="pa-2">
-        <v-btn block>
-          Logout
-        </v-btn>
+        <v-btn block> Logout </v-btn>
       </div>
     </template>
   </v-navigation-drawer>
-
-  <v-btn
-    class="ma-2"
-    color="primary"
-    @click="drawer = !drawer"
-  >
-    Toggle Drawer
-  </v-btn>
 </template>
 
 <script setup lang="ts">
-const drawer = ref(true)
+import { useAppStore } from "@/stores/app";
+const appStore = useAppStore();
 </script>
+
+<style scoped>
+.custom-drawer {
+  margin-top: 20px;
+  margin-left: 12px;
+  height: 90vh!important;
+}
+</style>
