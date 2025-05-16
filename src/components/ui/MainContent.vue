@@ -1,46 +1,62 @@
 <template>
   <v-container fluid>
     <!-- Filter #Todo - Separar em componente -->
-    <v-card class="my-3 bg-primary d-flex justify-center align-center">
-        <v-row>
 
-        <v-col cols="12" md="4">
-          <v-select
-          label="Selecione a cidade"
-          :items="['São Paulo', 'Rio de Janeiro', 'Belo Horizonte']"
-          ></v-select>
-        </v-col>
-        <v-col cols="12" md="4">
-          <v-select
-          label="Selecione o que procura"
-          :items="['Restaurantes', 'Hotéis', 'Lojas']"
-          ></v-select>
-        </v-col>
-        <v-col cols="12" md="4">
-          <v-select
-          label="Selecione a distância"
-          :items="['5km', '10km', '20km']"
-          ></v-select>
-        </v-col>
+       <v-row >
+          <v-col  cols="12" md="3">
+            <v-combobox
+            variant="solo"
+            rounded="xl"
+            label="Selecione a cidade"
+            :items="['São Paulo', 'Rio de Janeiro', 'Belo Horizonte']"
+            ></v-combobox>
+
+          </v-col>
+          <v-col  cols="12" md="3">
+            <v-combobox
+            variant="solo"
+            rounded="xl"
+            label="Selecione o que procura"
+            :items="['Restaurantes', 'Hotéis', 'Lojas']"
+            ></v-combobox>
+
+          </v-col>
+          <v-col  cols="12" md="3">
+            <v-combobox
+            variant="solo"
+            rounded="xl"
+            label="Selecione a distância"
+            :items="['5km', '10km', '20km']"
+            ></v-combobox>
+
+          </v-col>
+          <v-col cols="12" md="3">
+            <v-combobox
+            variant="solo"
+            rounded="xl"
+            label="Selecione o valor"
+            :items="['1,00', '2,00', '200']"
+            ></v-combobox>
+          </v-col>
       </v-row>
-      </v-card>
-    <v-row  class=" d-flex align-center" style="height: 500px;" v-if="!approvedShowItems">
+    <v-row
+      class="d-flex align-center"
+      style="height: 500px"
+      v-if="!approvedShowItems"
+    >
       <v-col cols="12" class="d-flex justify-center">
         <v-btn
           color="purple"
           variant="flat"
           size="x-large"
           rounded="xl"
-          density="compact"
           @click="approvedShowItems = !approvedShowItems"
         >
           Mostrar itens
         </v-btn>
       </v-col>
-
     </v-row>
-    <!-- Grid items  #Todo - Separar em componente -->
-    <v-row v-if="approvedShowItems" class="d-flex justify-center">
+    <v-row v-if="approvedShowItems" class="d-flex justify-center mt-1">
       <v-col cols="3" lg="2" md="4" sm="6" v-for="item in 18" :key="item">
         <v-card max-width="344">
           <v-img
@@ -68,8 +84,8 @@
               class=""
               size="24"
             >
-              {{ curtidoTeste ? 'mdi-heart' : 'mdi-heart-outline'  }} </v-icon
-            >
+              {{ curtidoTeste ? "mdi-heart" : "mdi-heart-outline" }}
+            </v-icon>
           </v-card-actions>
 
           <v-expand-transition>
