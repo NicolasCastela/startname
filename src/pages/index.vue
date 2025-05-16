@@ -1,5 +1,4 @@
 <template>
-<ToolBars/>
 <MainContent/>
 </template>
 

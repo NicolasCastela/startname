@@ -1,5 +1,5 @@
 <template>
-  <v-app-bar  density="compact" floating :elevation="0">
+  <v-app-bar  class="bg-primary" density="compact" floating :elevation="0">
     <template v-slot:prepend>
       <v-app-bar-nav-icon size="small" @click="toggleLocalDrawer">
       </v-app-bar-nav-icon>
@@ -76,3 +76,9 @@ const toggleLocalDrawer = () => {
   appStore.toggleDrawer();
 };
 </script>
+
+<style scoped>
+
+.asdperson{
+  background: #1e1e2f;
+}</style>

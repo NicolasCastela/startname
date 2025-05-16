@@ -1,29 +1,46 @@
 <template>
   <v-container fluid>
     <!-- Filter #Todo - Separar em componente -->
-    <v-row>
-      <v-col cols="12" md="4">
-        <v-select
+    <v-card class="my-3 bg-primary d-flex justify-center align-center">
+        <v-row>
+
+        <v-col cols="12" md="4">
+          <v-select
           label="Selecione a cidade"
           :items="['São Paulo', 'Rio de Janeiro', 'Belo Horizonte']"
-        ></v-select>
-      </v-col>
-      <v-col cols="12" md="4">
-        <v-select
+          ></v-select>
+        </v-col>
+        <v-col cols="12" md="4">
+          <v-select
           label="Selecione o que procura"
           :items="['Restaurantes', 'Hotéis', 'Lojas']"
-        ></v-select>
-      </v-col>
-      <v-col cols="12" md="4">
-        <v-select
+          ></v-select>
+        </v-col>
+        <v-col cols="12" md="4">
+          <v-select
           label="Selecione a distância"
           :items="['5km', '10km', '20km']"
-        ></v-select>
+          ></v-select>
+        </v-col>
+      </v-row>
+      </v-card>
+    <v-row  class=" d-flex align-center" style="height: 500px;" v-if="!approvedShowItems">
+      <v-col cols="12" class="d-flex justify-center">
+        <v-btn
+          color="purple"
+          variant="flat"
+          size="x-large"
+          rounded="xl"
+          density="compact"
+          @click="approvedShowItems = !approvedShowItems"
+        >
+          Mostrar itens
+        </v-btn>
       </v-col>
-    </v-row>
 
+    </v-row>
     <!-- Grid items  #Todo - Separar em componente -->
-    <v-row class="d-flex justify-center">
+    <v-row v-if="approvedShowItems" class="d-flex justify-center">
       <v-col cols="3" lg="2" md="4" sm="6" v-for="item in 18" :key="item">
         <v-card max-width="344">
           <v-img
@@ -78,6 +95,7 @@
 <script setup lang="ts">
 const show = ref(false);
 const curtidoTeste = ref(false);
+const approvedShowItems = ref(false);
 </script>
 
 <style scoped></style>
