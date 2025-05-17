@@ -1,7 +1,6 @@
 <template>
     <AppBar />
     <AppDrawer />
-
 </template>
 
 <script setup lang="ts">

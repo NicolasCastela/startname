@@ -49,6 +49,7 @@
           color="purple"
           variant="flat"
           size="x-large"
+          density="compact"
           rounded="xl"
           @click="approvedShowItems = !approvedShowItems"
         >

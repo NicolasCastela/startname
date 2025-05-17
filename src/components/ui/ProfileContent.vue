@@ -1,13 +1,13 @@
 <template>
   <!-- Perfil Principal -->
-  <v-row >
+  <v-row v-if="!editprofile">
     <v-col cols="12">
       <v-card
         class="pa-6 d-flex bg-primary flex-column flex-md-row align-center mb-8"
         rounded="xl"
         elevation="4"
       >
-        <v-avatar size="120" class="me-6">
+        <v-avatar size="240" class="me-6">
           <v-img
             src="https://avatars0.githubusercontent.com/u/9064066?v=4&s=460"
             alt="Avatar"
@@ -19,13 +19,7 @@
             <h2 class="text-h4 font-weight-bold mb-2 purple--text">
               Nícolas Brizol Castela
             </h2>
-            <v-btn
-              color="white"
-              variant="outlined"
-              rounded="xl"
-              class="ma-0"
-              @click="sendMessage"
-            >
+            <v-btn  @click="editprofile = true" color="white" variant="outlined" rounded="xl" class="ma-0">
               <v-icon class="mr-2" left>mdi-account</v-icon>
               Editar Perfil
             </v-btn>
@@ -182,13 +176,13 @@
         </h3>
         <v-list class="bg-primary" two-line>
           <v-list-item>
-              <v-list-item-title class="font-weight-bold"
-                >Qual seu hobbie favorito?</v-list-item-title
-              >
-              <v-list-item-subtitle
-                >Gosto muito de tocar violão e sair para
-                trilhas.</v-list-item-subtitle
-              >
+            <v-list-item-title class="font-weight-bold"
+              >Qual seu hobbie favorito?</v-list-item-title
+            >
+            <v-list-item-subtitle
+              >Gosto muito de tocar violão e sair para
+              trilhas.</v-list-item-subtitle
+            >
           </v-list-item>
           <v-list-item>
             <v-list-item-content>
@@ -219,12 +213,13 @@
       </v-card>
     </v-col>
   </v-row>
+  <v-row v-if="editprofile">
+    <EditProfileContent  @close-edit="editprofile = false"/>
+  </v-row>
 </template>
 
 <script setup lang="ts">
-const sendMessage = () => {
-  alert("Função enviar mensagem clicada!");
-};
+const editprofile = ref(false);
 
 const askQuestion = () => {
   alert("Pergunta enviada!");

@@ -11,6 +11,8 @@ declare module 'vue' {
     AppBar: typeof import('./components/layout/AppBar.vue')['default']
     AppDrawer: typeof import('./components/layout/AppDrawer.vue')['default']
     AppFooter: typeof import('./components/layout/AppFooter.vue')['default']
+    Dark: typeof import('./components/ui/dark.vue')['default']
+    EditProfileContent: typeof import('./components/ui/EditProfileContent.vue')['default']
     HelloWorld: typeof import('./components/HelloWorld.vue')['default']
     Login: typeof import('./components/auth/Login.vue')['default']
     MainContent: typeof import('./components/ui/MainContent.vue')['default']
