@@ -69,7 +69,7 @@
 <script lang="ts" setup>
 import { useAppStore } from "@/stores/app";
 const appStore = useAppStore();
-const logged = ref(true);
+const logged = ref(false);
 const dialog = ref(false);
 const showpass = ref(false);
 const toggleLocalDrawer = () => {

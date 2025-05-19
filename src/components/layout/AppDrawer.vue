@@ -66,7 +66,7 @@ const drawerItems = [
     icon: "mdi-account-circle-outline",
     to: "/profile",
   },
-  { title: "Mensagens", value: "settings", icon: "mdi-message" },
+  { title: "Mensagens", value: "settings", icon: "mdi-message",  to: "/messages" },
   { title: "Carteira", value: "profile", icon: "mdi-wallet" },
   { title: "Planos", value: "plans", icon: "mdi-clipboard-list" },
   { title: "Avaliações", value: "reviews", icon: "mdi-star-outline" },
