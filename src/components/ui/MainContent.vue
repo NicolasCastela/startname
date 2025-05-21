@@ -1,44 +1,40 @@
 <template>
   <v-container fluid>
     <!-- Filter #Todo - Separar em componente -->
-
-       <v-row >
-          <v-col  cols="12" md="3">
-            <v-combobox
-            variant="solo"
-            rounded="xl"
-            label="Selecione a cidade"
-            :items="['São Paulo', 'Rio de Janeiro', 'Belo Horizonte']"
-            ></v-combobox>
-
-          </v-col>
-          <v-col  cols="12" md="3">
-            <v-combobox
-            variant="solo"
-            rounded="xl"
-            label="Selecione o que procura"
-            :items="['Restaurantes', 'Hotéis', 'Lojas']"
-            ></v-combobox>
-
-          </v-col>
-          <v-col  cols="12" md="3">
-            <v-combobox
-            variant="solo"
-            rounded="xl"
-            label="Selecione a distância"
-            :items="['5km', '10km', '20km']"
-            ></v-combobox>
-
-          </v-col>
-          <v-col cols="12" md="3">
-            <v-combobox
-            variant="solo"
-            rounded="xl"
-            label="Selecione o valor"
-            :items="['1,00', '2,00', '200']"
-            ></v-combobox>
-          </v-col>
-      </v-row>
+    <v-row>
+      <v-col cols="12" md="3">
+        <v-combobox
+          variant="solo"
+          rounded="xl"
+          label="Selecione a cidade"
+          :items="['São Paulo', 'Rio de Janeiro', 'Belo Horizonte']"
+        ></v-combobox>
+      </v-col>
+      <v-col cols="12" md="3">
+        <v-combobox
+          variant="solo"
+          rounded="xl"
+          label="Selecione o que procura"
+          :items="['Restaurantes', 'Hotéis', 'Lojas']"
+        ></v-combobox>
+      </v-col>
+      <v-col cols="12" md="3">
+        <v-combobox
+          variant="solo"
+          rounded="xl"
+          label="Selecione a distância"
+          :items="['5km', '10km', '20km']"
+        ></v-combobox>
+      </v-col>
+      <v-col cols="12" md="3">
+        <v-combobox
+          variant="solo"
+          rounded="xl"
+          label="Selecione o valor"
+          :items="['1,00', '2,00', '200']"
+        ></v-combobox>
+      </v-col>
+    </v-row>
     <v-row
       class="d-flex align-center"
       style="height: 500px"

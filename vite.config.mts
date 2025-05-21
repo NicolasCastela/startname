@@ -18,9 +18,11 @@ export default defineConfig({
     VueRouter({
       dts: 'src/typed-router.d.ts',
       routesFolder: 'src/pages',
+      routeBlockLang: 'json5',
     }),
     Layouts({
       layoutsDirs: 'src/layouts', // opcional se você seguir o padrão
+      defaultLayout: 'default', // define o layout padrão (opcional)
     }),
     AutoImport({
       imports: [
@@ -42,7 +44,6 @@ export default defineConfig({
     Vue({
       template: { transformAssetUrls },
     }),
-    // https://github.com/vuetifyjs/vuetify-loader/tree/master/packages/vite-plugin#readme
     Vuetify({
       autoImport: true,
       styles: {
