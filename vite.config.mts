@@ -17,8 +17,11 @@ export default defineConfig({
   plugins: [
     VueRouter({
       dts: 'src/typed-router.d.ts',
+      routesFolder: 'src/pages',
     }),
-    Layouts(),
+    Layouts({
+      layoutsDirs: 'src/layouts', // opcional se você seguir o padrão
+    }),
     AutoImport({
       imports: [
         'vue',

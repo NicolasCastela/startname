@@ -1,5 +1,5 @@
 <template>
-  <v-app-bar  class="bg-primary" density="compact" floating :elevation="0">
+  <v-app-bar class="bg-primary" density="compact" floating :elevation="0">
     <template v-slot:prepend>
       <v-app-bar-nav-icon size="small" @click="toggleLocalDrawer">
       </v-app-bar-nav-icon>
@@ -15,7 +15,13 @@
         >
           Entrar
         </v-btn>
-        <v-btn color="purple" variant="flat" size="small" class="mr-4">
+        <v-btn
+          color="purple"
+          to="/register"
+          variant="flat"
+          size="small"
+          class="mr-4"
+        >
           Registrar
         </v-btn>
       </template>
@@ -34,15 +40,13 @@
   <v-dialog max-width="500" v-model="dialog">
     <template v-slot:default="{ isActive }">
       <v-card title="Entrar">
-
         <v-form class="pa-4">
           <v-text-field
             label="Usuário"
             persistent-placeholder
             variant="outlined"
             density="compact"
-            ></v-text-field
-          >
+          ></v-text-field>
           <v-text-field
             variant="outlined"
             density="compact"
@@ -78,7 +82,7 @@ const toggleLocalDrawer = () => {
 </script>
 
 <style scoped>
-
-.asdperson{
+.asdperson {
   background: #1e1e2f;
-}</style>
+}
+</style>

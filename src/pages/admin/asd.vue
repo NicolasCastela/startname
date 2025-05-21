@@ -1,5 +1,6 @@
 <template>
-  <MainContent />
+  <Abacate />
+  <h2>Ola</h2>
 </template>
 
 <script setup lang="ts"></script>

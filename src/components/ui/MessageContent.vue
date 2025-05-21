@@ -5,7 +5,7 @@
         <v-card
           title="Chats"
           append-icon="mdi-plus"
-          class="pa-6 bg-primary"
+          class="pa-6 bg-primary m-height-cards"
           rounded="xl"
           elevation="4"
         >
@@ -24,7 +24,7 @@
               class="py-3 my-3 px-1"
             >
               <template v-slot:prepend>
-                <v-badge  dot v-if="item.online" color="green" size="x-small" >
+                <v-badge dot v-if="item.online" color="green" size="x-small">
                   <v-avatar>
                     <v-img :src="item.prependAvatar" />
                   </v-avatar>
@@ -55,13 +55,17 @@
         </v-card>
       </v-col>
       <v-col cols="6">
-        <v-card class="pa-6 bg-primary" rounded="xl" elevation="4">
+        <v-card
+          class="pa-6 bg-primary m-height-cards"
+          rounded="xl"
+          elevation="4"
+        >
           <h1>ola</h1>
         </v-card>
       </v-col>
       <v-col cols="3">
         <v-card
-          class="pa-6 d-flex bg-primary flex-column flex-md-row"
+          class="pa-6 d-flex bg-primary flex-column flex-md-row m-height-cards"
           rounded="xl"
           elevation="4"
         >
@@ -84,7 +88,7 @@ const items = ref([
     title: "Brunch this weekend?",
     subtitle: `Ali Connors I'll be in your neighborhood doing errands this weekend. Do you want to hang out?`,
     badge: "3",
-    online: true
+    online: true,
   },
   {
     prependAvatar: "https://cdn.vuetifyjs.com/images/lists/2.jpg",
@@ -114,9 +118,13 @@ const items = ref([
     title: "Recipe to try",
     subtitle:
       " Britta Holt  We should eat this: Grate, Squash, Corn, and tomatillo Tacos.",
-      online: true,
+    online: true,
   },
 ]);
 </script>
 
-<style scoped></style>
+<style scoped>
+.m-height-cards {
+  height: 89.5vh !important;
+}
+</style>

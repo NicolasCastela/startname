@@ -8,19 +8,22 @@ export {}
 /* prettier-ignore */
 declare module 'vue' {
   export interface GlobalComponents {
-    AppBar: typeof import('./components/layout/AppBar.vue')['default']
-    AppDrawer: typeof import('./components/layout/AppDrawer.vue')['default']
-    AppFooter: typeof import('./components/layout/AppFooter.vue')['default']
+    AppBar: typeof import('./components/body/AppBar.vue')['default']
+    AppDrawer: typeof import('./components/body/AppDrawer.vue')['default']
+    AppFooter: typeof import('./components/body/AppFooter.vue')['default']
+    Auth: typeof import('./components/ui/layouts/auth.vue')['default']
     Dark: typeof import('./components/ui/dark.vue')['default']
+    Default: typeof import('./components/ui/layouts/default.vue')['default']
     EditProfileContent: typeof import('./components/ui/EditProfileContent.vue')['default']
     HelloWorld: typeof import('./components/HelloWorld.vue')['default']
     Login: typeof import('./components/auth/Login.vue')['default']
     MainContent: typeof import('./components/ui/MainContent.vue')['default']
     MessageContent: typeof import('./components/ui/MessageContent.vue')['default']
     ProfileContent: typeof import('./components/ui/ProfileContent.vue')['default']
+    RegisterContent: typeof import('./components/ui/RegisterContent.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
-    ToolBars: typeof import('./components/layout/ToolBars.vue')['default']
+    ToolBars: typeof import('./components/body/ToolBars.vue')['default']
     ViewContent: typeof import('./components/ui/viewContent.vue')['default']
   }
 }
