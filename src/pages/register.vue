@@ -7,7 +7,7 @@ definePage({
   name: "RegisterContent",
   meta: {
     title: "RegisterContent",
-    layout: "abacate",
+    layout: "cleanarch",
   },
 });
 </script>

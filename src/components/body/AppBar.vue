@@ -37,7 +37,7 @@
 
     <v-app-bar-title>Logo aquisad</v-app-bar-title>
   </v-app-bar>
-  <v-dialog hide-footer max-width="500" v-model="dialog">
+  <v-dialog persistent max-width="500" v-model="dialog">
     <template v-slot:default="{ isActive }">
       <v-card class="bg-primary">
         <v-toolbar variant="flat" class="bg-primary">
@@ -91,8 +91,4 @@ const toggleLocalDrawer = () => {
 };
 </script>
 
-<style scoped>
-.asdperson {
-  background: #1e1e2f;
-}
-</style>
+<style scoped></style>
