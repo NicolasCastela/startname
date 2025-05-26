@@ -37,9 +37,14 @@
 
     <v-app-bar-title>Logo aquisad</v-app-bar-title>
   </v-app-bar>
-  <v-dialog max-width="500" v-model="dialog">
+  <v-dialog hide-footer max-width="500" v-model="dialog">
     <template v-slot:default="{ isActive }">
-      <v-card title="Entrar">
+      <v-card class="bg-primary">
+        <v-toolbar variant="flat" class="bg-primary">
+          <v-toolbar-title>Entrar</v-toolbar-title>
+          <v-spacer></v-spacer>
+          <v-btn icon="mdi-close" @click="dialog = false"></v-btn>
+        </v-toolbar>
         <v-form class="pa-4">
           <v-text-field
             label="Usuário"
@@ -58,12 +63,17 @@
             @click:append-inner="showpass = !showpass"
             :type="showpass ? 'text' : 'password'"
           ></v-text-field>
-          <v-btn color="success">Entrar</v-btn>
         </v-form>
         <v-card-actions>
+          <span class="text-caption cursor-pointer ml-4">Esqueci a senha</span>
           <v-spacer></v-spacer>
-
-          <v-btn text="Close Dialog" @click="isActive.value = false"></v-btn>
+          <v-btn
+            variant="flat"
+            text="Entrar"
+            color="success"
+            class="mr-2"
+            @click="isActive.value = false"
+          ></v-btn>
         </v-card-actions>
       </v-card>
     </template>
